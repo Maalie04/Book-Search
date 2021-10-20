@@ -14,11 +14,11 @@ const typeDefs = gql`
     _id: ID
     author: [String]
     email: String
-    imaage: String
+    image: String
     link: String!
     title: String!
-    bookID: String!
-    createdAt: String
+    bookId: String!
+    description: String
   }
 
   type Auth {
@@ -29,8 +29,7 @@ const typeDefs = gql`
   type Query {
     users: [User]
     getSingleUser(user: String!): User
-    books(username: String): [Book]
-    book(bookID: ID!): Book
+  
     me: User
   }
 
